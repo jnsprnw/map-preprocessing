@@ -23,7 +23,7 @@ usa:
 	mapshaper \
 		source/$(file)/$(file).shp \
 		-filter '"USA".indexOf(ADM0_A3) > -1' \
-		-affine shift=4,9.5 scale=0.25 rotate=-17 \
+		-affine shift=4,9 scale=0.25 rotate=-14 \
 		-o target/$(file)_usa.shp
 
 # Create a version of Europe with Russia included
