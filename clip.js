@@ -3,10 +3,11 @@ const { writeFileSync } = require('fs');
 
 // console.log('input', process.argv[process.argv.length - 1]);
 
-const coordinates = [11.961833057409644 + 0.4 + 0.5, 51.212890862110186 - 3.4]; //[lon, lat]
+// These are the coordinates with some fine tuning by myself.
+const coordinates = [11.886553903952995 + 0.4 + 0.3, 51.62319673825441 - 3.4 - 1.8]; //[lon, lat]
 
-const radius = 2850000 + 100000; // in meters
-// const radius = 5850000; // in meters
+// This is the radius, again with some fine tuning
+const radius = 2850000 + 80000; // in meters
 const options = { numberOfEdges: 256 }; //optional, that defaults to { numberOfEdges: 32 }
 
 let polygon = circleToPolygon(coordinates, radius, options);

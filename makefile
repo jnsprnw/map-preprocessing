@@ -10,7 +10,7 @@ prepare:
 	mapshaper \
 		source/$(file)/$(file).shp \
 		-filter '(REGION_UN === "Europe" || "$(countries)".indexOf(ADM0_A3) > -1) && ADM0_A3 !== "RUS"' \
-		-o source/$(file)_filtered.json format=geojson
+		-o source/centroid.json format=geojson
 	node centroid.js
 
 # Copy the output to clip.js

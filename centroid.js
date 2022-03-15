@@ -1,7 +1,7 @@
 const { default: centroid} = require('@turf/centroid');
 const { readFileSync } = require('fs');
 
-const feature = JSON.parse(readFileSync('source/ne_50m_admin_0_countries_filtered.json'));
+const feature = JSON.parse(readFileSync('source/centroid.json'));
 
 const point = centroid(feature).geometry.coordinates;
 
